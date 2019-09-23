@@ -1,7 +1,7 @@
 {
-  "name": "a1",
+  "name": "a2",
   "version": "1.0.0",
-  "description": "Sample for Assignment 1, CS3451, Fall 2019",
+  "description": "Sample Solution for Assignment 2, CS3451, Fall 2019",
   "dependencies": {},
   "devDependencies": {
     "http-server": "0.11.1",
@@ -11,5 +11,5 @@
     "http": "http-server -c-1 --cors"
   },
   "author": "Blair MacIntyre <blair@cc.gatech.edu>",
-  "license": "CC BY-SA 4.0"
+  "license": "CC BY-NC-SA 4.0"
 }
