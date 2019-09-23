@@ -1,0 +1,22 @@
+{
+	"compilerOptions": {
+        "module": "ES2015",
+        "target": "ES2017",
+		"strict": true,		
+		"noImplicitAny": true,
+		"preserveConstEnums":true,
+		"outDir": "js",
+		"sourceMap": true,
+		"watch": false
+	},
+	"files": [
+		"src/ex1.ts",
+		"src/ex2.ts",
+		"src/ex3.ts",
+		"src/ex4.ts",
+		"src/ex5.ts",
+		"src/app.ts",
+		"src/SG.ts",
+		"src/basic-object-models-IFS.ts"
+	]
+}

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  
+  <!-- disable zooming -->
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=0" />
+  
+  <title>Example For A1, part three</title>
+
+  <link rel="stylesheet" href="includes/style.css" media="screen" />
+    
+  <style media="screen">
+    .container {
+      width: 75%;
+      height: 500px;
+      border: 1px solid #CCC;
+      margin: 0 auto 60px;
+      position: relative;
+      overflow: visible;
+      transform-style: preserve-3d;
+    }
+
+    .panel {
+      width: 192px;
+      height: 192px;
+      position: absolute;
+      opacity: 0.7;
+      border: 4px solid black;
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+      background: red;
+      transform-style: preserve-3d;      
+    }
+
+    .image {
+      background-color: transparent;
+      background-size: cover;
+      opacity: 1.0;
+    }
+  </style>
+
+</head>
+<body>
+
+  <h1><center>Example For A2</center></h1>
+  
+  <div id="scene" class="container">
+  </div>
+
+  <center>
+  The scene should look like this when it is fully working.
+  <img class="container" src="img/a2-ex4.gif">
+</center>
+  <script type="module" src="js/ex4.js"></script>
+
+</body>
+</html>
