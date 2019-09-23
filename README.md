@@ -57,11 +57,9 @@ We have provided multiple test programs that can be used test your `src/SG.ts` m
 - `src/ex1.ts` and `ex1.html` implement scenes similar to A1, shown above.  You can use this as a first set of tests;  once ex1.html matches the images above, at least the core of `src/SG.ts` works.  The examples in this sample can be close to working with only a very simple fragment shader (e.g., most lighting can be ignored).  The images above are from this working sample with correct lighting.
 
 - A second test set is in `index.html` and `src/app.ts`, with a static variation in `ex2.html` and `src/ex2.ts`.  These two programs implement similar scenes, but `index.html` is animated (and the central cube is tilted forward, showing the top), while `ex2.html` is static (and the central cube is tilted upward, showing the bottom).  This sample should be modified to complete the texture coordinate half of the assignment.
-
- - Here is the animated index.html:
+  - Here is the animated index.html:
 ![scene 1](img/a2-index.gif)
-
- - Here is the static ex2.html:
+  - Here is the static ex2.html:
 ![scene 1](img/a2-ex2.png)
 
 - A version of ex2.ts without textures is in ex3.ts;  this will be useful for testing if you have not yet gotten textures working.  Ex4 and ex5 are a scene (animated and not) with eight lights. 
