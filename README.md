@@ -59,12 +59,11 @@ A second test is in index.html plus src/app.ts, and ex2.html plus src/ex2.ts.  T
 ![scene 1](img/a2-index.gif)
 
 - Here is the static ex2.html:
-
 ![scene 1](img/a2-ex2.png)
 
 A version of ex2.ts without textures is in ex3.ts;  this will be useful for testing if you have not yet gotten textures working.  Ex4 and ex5 are a scene (animated and not) with eight lights. 
 
-The second part of the assignment is to adjust the texture coordinates on this central cube (in both samples!) so that the texture on it has each of the six "names" mapped to the correct fact, and orientated correctly (as shown in the above images):
+The second part of the assignment is to adjust the texture coordinates on this central cube (in both src/app.ts and src/ex2) so that the texture on it has each of the six "names" mapped to the correct fact, and orientated correctly (as shown in the above images):
 - "front", "back", "left", "right" should be on the appropriate sides (left and right are on the left and right sides when looking at the front).  The text should be oriented so it is in the natural, readable orientation (the text should be horizontal and read left-to-right).  
 - "top" and "bottom" have smaller "(front)" text near one edge: that is the edge that should touch the front face.
 
