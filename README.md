@@ -62,26 +62,31 @@ We have provided multiple test programs that can be used test your `src/SG.ts` m
   - Here is the static ex2.html:
 ![scene 1](img/a2-ex2.png)
 
-- A version of ex2.ts without textures is in ex3.ts;  this will be useful for testing if you have not yet gotten textures working.  Ex4 and ex5 are a scene (animated and not) with eight lights. 
+- A version of `ex2` without textures is in `ex3`;  this will be useful for testing lighting because the colors are clearer.  
 
-The second part of the assignment is to adjust the texture coordinates on this central cube (in both src/app.ts and src/ex2) so that the texture on it has each of the six "names" mapped to the correct fact, and orientated correctly (as shown in the above images):
-- "front", "back", "left", "right" should be on the appropriate sides (left and right are on the left and right sides when looking at the front).  The text should be oriented so it is in the natural, readable orientation (the text should be horizontal and read left-to-right).  
-- "top" and "bottom" have smaller "(front)" text near one edge: that is the edge that should touch the front face.
-
+- `ex4` and `ex5` are a scene (animated and not) with eight lights. 
 
 ### Scene Graph
 
 The sample code has comments to explain what needs to be written, but the main requirements are:
 
-- Use WebGL instead of the CSS Perspective Div.  The Scene constructor has been updated to set up the canvas correctly.
-- The scene graph now has "Drawable" (to replace HTMLThing) that has a "mesh" in it that should be rendered using a WebGL shader.  There are a number of subtypes of Drawable provided to implement some standard object types.
-- Each Drawable has a Surface properties property that defines the parameters to the lighting equation, and may also include a Texture for the surface.  
-- There are now lights, which can be positional or directional.  Your graph should support up to either lights.  
-- The shader program for your project should support having a texture or not, having directional and point lights, and having up to eight lights.
+- Use WebGL instead of CSS perspective.  The Scene constructor has been updated to set up the canvas correctly for WebGL.
+- The scene graph now has a `Drawable` class (to replace `HTMLThing`) that has a `mesh` property in it that should be rendered using a WebGL shader. The `mesh` contains a list of vertices, texture coordinates, and normals, along with an list of indices that define a series of triangles.
+- There are a number of subtypes of `Drawable` provided that create some standard 3D object types.
+- Each `Drawable` has a `Surface` property that defines the parameters to the lighting equation, and may also include a `Texture` property for the surface.  
+- There are now `Light`s, which can be positional or directional.  Your graph should support up to eight lights.  
+- Your implementation should support rendering object that have a texture or not, illuminated by up to eight directional and point lights.  You may implement these variations with one or more shaders.  The provided code assumes you will use a single shader, but you can change this to more shaders if you would like.
 
 ### Custom Texture Coordinates
 
-The test files in src/app.ts and src/ex2.ts both contain a place to update the texture coordinates on the central cube in the scene.  The initial texture coordinates (which correspond to the default coordinates on the cube) map the entire texture to each face of the cube.  You should change the coordinates so that the correct 1/9th of the texture maps to the correct face, with the correct orientation, as described above.
+The second part of the assignment is to adjust the texture coordinates on the central cube in both `src/app.ts` and `src/ex2` so that the texture on it has each of the six "names" mapped to the correct face, and orientated correctly (as shown in the above images):
+
+- "front", "back", "left", "right" should be on the appropriate sides (left and right are on the left and right sides when looking at the front).  The text should be oriented so it is in the shown orientation (the text should be horizontal and read left-to-right around the cube).  
+
+- "top" and "bottom" have smaller "(front)" text near one edge: that is the edge that should touch the front face.
+
+The test files in `src/app.ts` and `src/ex2.ts` both contain a place to update the texture coordinates on the central cube in the scene.  The initial texture coordinates (which correspond to the default coordinates on the cube) map the entire texture to each face of the cube.  You should change the coordinates so that the correct 1/9th of the texture appears on the correct face, with the correct orientation.
+
 
 ## Submission
 
