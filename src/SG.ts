@@ -615,10 +615,6 @@ export class Drawable extends Thing {
         this.mesh = mesh
     }
     
-    setMaterial(s: Surface) {
-        this.surface = s;
-    }
-
     render(gl: WebGLRenderingContext, sd: ShaderData) {
         if (this.a_normal_buffer === null) {
             this.a_coords_buffer = gl.createBuffer();
