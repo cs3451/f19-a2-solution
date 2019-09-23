@@ -33,7 +33,7 @@ The main task will be to complete a fragment shader that implements a lighting m
 
 (where `Ipi` is the illumination of light `i`, a combination of the color of the light and a floating point intensity that scales the color).
 
-The sample code also includes a new version of the previous example program (`ex1.html` and `src/ex1.ts`) that uses src/SG.ts to render the set of five simple scenes from A1 (the cubes have images of the DIVs from A1 texture mapped onto them):
+The sample code also includes a new version of the previous example program (`ex1.html` and `src/ex1.ts`) that uses WebGL to render the set of five simple scenes from this A1 sample (in this case, we have created images of the DIVs from A1, and texture mapped them onto cubes):
 
 - single cube, translated -11000 in z, camera translated by (-100,100,0)<br>
 ![scene 1](img/ex1a.png)
@@ -52,17 +52,19 @@ The sample code also includes a new version of the previous example program (`ex
 
 ## Details
 
-We have provided two different test programs that can be used test your src/SG.ts module.  First, src/ex1.ts and ex1.html implement scenes similar to A2.  You can use this as a first set of tests;  once ex1.html matches the images above, your src/SG.ts probably mostly works.  The images above are from this working sample.
+We have provided multiple test programs that can be used test your `src/SG.ts` module.  
 
-A second test is in index.html plus src/app.ts, and ex2.html plus src/ex2.ts.  These two programs implement similar scenes, but index.html is animated (and the central cube is tilted forward, showing the top), while ex2.html is static (and the central cube is tilted upward, showing the bottom).  
+- `src/ex1.ts` and `ex1.html` implement scenes similar to A1, shown above.  You can use this as a first set of tests;  once ex1.html matches the images above, at least the core of `src/SG.ts` works.  The examples in this sample can be close to working with only a very simple fragment shader (e.g., most lighting can be ignored).  The images above are from this working sample with correct lighting.
 
-- Here is the animated index.html:
+- A second test set is in `index.html` and `src/app.ts`, with a static variation in `ex2.html` and `src/ex2.ts`.  These two programs implement similar scenes, but `index.html` is animated (and the central cube is tilted forward, showing the top), while `ex2.html` is static (and the central cube is tilted upward, showing the bottom).  This sample should be modified to complete the texture coordinate half of the assignment.
+
+-- Here is the animated index.html:
 ![scene 1](img/a2-index.gif)
 
-- Here is the static ex2.html:
+-- Here is the static ex2.html:
 ![scene 1](img/a2-ex2.png)
 
-A version of ex2.ts without textures is in ex3.ts;  this will be useful for testing if you have not yet gotten textures working.  Ex4 and ex5 are a scene (animated and not) with eight lights. 
+- A version of ex2.ts without textures is in ex3.ts;  this will be useful for testing if you have not yet gotten textures working.  Ex4 and ex5 are a scene (animated and not) with eight lights. 
 
 The second part of the assignment is to adjust the texture coordinates on this central cube (in both src/app.ts and src/ex2) so that the texture on it has each of the six "names" mapped to the correct fact, and orientated correctly (as shown in the above images):
 - "front", "back", "left", "right" should be on the appropriate sides (left and right are on the left and right sides when looking at the front).  The text should be oriented so it is in the natural, readable orientation (the text should be horizontal and read left-to-right).  
