@@ -28,24 +28,24 @@ The graph's ```render()``` method will compute all of the transformations on the
 An updated skeleton of src/SG.ts is provided.
 
 The main task will be to implement a shader to implement a lighting model similar to the one discussed in class.  The equation for the Phong lighting model you will implement is:
-![Phong model](img/ex1a.png)
+![Phong model](img/phong.png)
 where `Ipi` is the illumination of a light, that is a combination of the color of the light and an scalar intensity that scales it.
 
 The sample code also includes an new version of the previous example program (ex1.html and src/ex1.ts) that uses src/SG.ts to render the set of five simple scenes from A1 (the cubes have images of the DIVs from A1 texture mapped onto them):
 
-- single cube, translated -11000 in z, camera translated by (-100,100,0)
+- single cube, translated -11000 in z, camera translated by (-100,100,0)<br>
 ![scene 1](img/ex1a.png)
 
-- single cube, translated -100 in z, camera translated by 451, so the front of the cube fills the view
+- single cube, translated -100 in z, camera translated by 451, so the front of the cube fills the view<br>
 ![scene 2](img/ex1b.png)
 
-- single cube, flatted with a non-uniform scale, rotated by 35 degrees around X
+- single cube, flatted with a non-uniform scale, rotated by 35 degrees around X<br>
 ![scene 3](img/ex1c.png)
 
-- two flattened cubes, transformed to be 90 degrees from each other, rotated on an edge, with a camera rotation, and a simple ground plane under them
+- two flattened cubes, transformed to be 90 degrees from each other, rotated on an edge, with a camera rotation, and a simple ground plane under them<br>
 ![scene 1](img/ex1d.png)
 
-- single flattened cube, rotating, with camera rotating as well
+- single flattened cube, rotating, with camera rotating as well<br>
 ![scene 1](img/ex1e.png)
 
 ## Details
