@@ -312,7 +312,7 @@ void main() {
         if (i>lightCount) {break;}
 
         vec3 lightVal = vec3(0.,0.,0.); 
-        if ( lightPosition[0].w == 0.0 ) {
+        if ( lightPosition[i].w == 0.0 ) {
             L = normalize( lightPosition[i].xyz );
         } else {
             vec3 Lvec = lightPosition[i].xyz/lightPosition[i].w - v_eyeCoords;
@@ -449,9 +449,6 @@ export class Drawable extends Thing {
         this.index_buffer = null;
         this.texCoord_buffer = null;
         this.mesh = mesh;
-    }
-    setMaterial(s) {
-        this.surface = s;
     }
     render(gl, sd) {
         if (this.a_normal_buffer === null) {

@@ -395,7 +395,7 @@ void main() {
         if (i>lightCount) {break;}
 
         vec3 lightVal = vec3(0.,0.,0.); 
-        if ( lightPosition[0].w == 0.0 ) {
+        if ( lightPosition[i].w == 0.0 ) {
             L = normalize( lightPosition[i].xyz );
         } else {
             vec3 Lvec = lightPosition[i].xyz/lightPosition[i].w - v_eyeCoords;
